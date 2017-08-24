@@ -48,14 +48,15 @@ NSString *const HTTPResponseErrorDomain = @"HTTPResponseErrorDomain";
 @property (nonatomic, strong) NSURLResponse *responseReceived;
 @property (nonatomic, strong) NSMutableData *accumulatedData;
 @property (nonatomic) NSInteger bytesReceived;
-@property (nonatomic, getter = isExecuting) BOOL executing;
-@property (nonatomic, getter = isFinished) BOOL finished;
-@property (nonatomic, getter = isCancelled) BOOL cancelled;
 
 @end
 
 
 @implementation RQOperation
+
+@synthesize executing = _executing;
+@synthesize cancelled = _cancelled;
+@synthesize finished = _finished;
 
 + (RQOperation *)operationWithRequest:(NSMutableURLRequest *)request
 {
