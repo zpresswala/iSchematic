@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ViewController initiateLogin]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Dashboard initUI]:Dashboard.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[NSString stringWithFormat:@&quot; %@ - %@&quot;,[self getModuleProperties:1:@&quot;group&quot;], userName]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[MTPopupWindowCloseButton buttonInView:]:MTPopupWindow.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "NSLayoutAttributeRight">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewModule viewSeqOfOp]:ViewModule.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "webView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Dashboard viewDidLoad]:Dashboard.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

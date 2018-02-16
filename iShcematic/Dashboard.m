@@ -114,10 +114,16 @@ NSString *imagePath;
         
         UIBarButtonItem *setup = [[UIBarButtonItem alloc] initWithTitle:@"Change PIN" style:UIBarButtonItemStylePlain target:self action:@selector(changePIN)];
         
-       // [self.navigationItem setLeftBarButtonItem:setup];
+
         
         UIBarButtonItem *help = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logMeOut)];
+//        help.tintColor = [[UIColor alloc] initWithRed:215/255.0 green:28/255.0 blue:56/255.0 alpha:1.0];
         [buttons addObject:help];
+        
+        // [self.navigationItem setLeftBarButtonItem:setup];
+        UIBarButtonItem* space = [[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 1)]];
+        [buttons addObject:space];
+        
         [buttons addObject:setup];
         //[self.navigationItem setRightBarButtonItem:help];
         [self.navigationItem setLeftBarButtonItems:buttons];
@@ -303,7 +309,7 @@ NSString *imagePath;
     fm = [NSFileManager defaultManager];
     
     if([data count] > 0)
-        [self setLabelParameter:groupLabel :[NSString stringWithFormat:@" %@ - %@",[self getModuleProperties:1:@"group"], userName] :@"264178" :NSTextAlignmentLeft :18];
+        [self setLabelParameter:groupLabel :[NSString stringWithFormat:@" %@ - %@",[self getModuleProperties:0:@"group"], userName] :@"264178" :NSTextAlignmentLeft :18];
     else
         [self setLabelParameter:groupLabel :@"" :@"264178" :NSTextAlignmentLeft :22];
     
@@ -360,7 +366,7 @@ NSString *imagePath;
 {
     [lbl setText:[NSString stringWithFormat:@"%@",string]];
     [lbl setFont:[UIFont fontWithName:@"Arial-BoldMT" size:fontSize]];
-    [lbl setBackgroundColor:[util colorWithHexString:color]];
+//    [lbl setBackgroundColor:[util colorWithHexString:color]];
     [lbl setTextColor:[UIColor whiteColor]];
     [lbl setTextAlignment:alignment];
 }
@@ -480,9 +486,10 @@ NSString *imagePath;
 {
     NSString *property=nil;
     //NSLog(@"INDEX %i", index);
-    if([data count] > 0)
+    if([data count] > index)
     {
         id obj = [data objectAtIndex:index];
+        
         for (NSString *key in obj) {
             
             if([key isEqualToString:prop])

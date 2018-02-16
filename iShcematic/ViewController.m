@@ -145,7 +145,8 @@
                 [HUD show:YES];
                 //NSLog(@"User Name: %@", email);
                 //NSLog(@"User Pass: %@", password);
-                deviceID = @"56hk654h6546h54u6y";
+                //deviceID = @"56hk654h6546h54u6y";
+                deviceID = @"7b1da41c5efea1b5290239b8c59d8bc2";
                 NSString *urlString = [NSString stringWithFormat:@"https://www.ischematic.com/service/webCall.do?u=%@&p=%@&f=iOS&i=%@", email, passwordMD5, deviceID];
                 //NSLog(@"urlString %@", urlString);
                 //urlString = [NSString stringWithFormat:@"http://secure.zenprofessional.com/tmp/webCall2.do.xml?u=%@&p=%@&f=iOS&i=%@", email, passwordMD5, deviceID];

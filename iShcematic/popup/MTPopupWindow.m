@@ -430,23 +430,23 @@ static CGSize kWindowMarginSize;
                                                             relatedBy: NSLayoutRelationEqual
                                                                toItem: v
                                                             attribute: NSLayoutAttributeTop
-                                                           multiplier: 0.0f
+                                                           multiplier: 1.0f
                                                              constant: closeBtnOffset];
     
     NSLayoutConstraint* wwidth = [NSLayoutConstraint constraintWithItem: closeBtn
                                                               attribute: NSLayoutAttributeWidth
                                                               relatedBy: NSLayoutRelationEqual
-                                                                 toItem: v
-                                                              attribute: NSLayoutAttributeWidth
-                                                             multiplier: 0.0f
+                                                                 toItem: nil
+                                                              attribute: NSLayoutAttributeNotAnAttribute
+                                                             multiplier: 1.0f
                                                                constant: kCloseBtnDiameter];
     
     NSLayoutConstraint* hheight = [NSLayoutConstraint constraintWithItem: closeBtn
                                                                attribute: NSLayoutAttributeHeight
                                                                relatedBy: NSLayoutRelationEqual
-                                                                  toItem: v
-                                                               attribute: NSLayoutAttributeHeight
-                                                              multiplier: 0.0f
+                                                                  toItem: nil
+                                                               attribute: NSLayoutAttributeNotAnAttribute
+                                                              multiplier: 1.0f
                                                                 constant: kCloseBtnDiameter];
     //replace the automatically created constraints
     [v replaceConstraint: topc];

@@ -78,7 +78,9 @@ UIBarButtonItem *popButton;
     }
     backButton = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBackModule)];
     detailButton = [[UIBarButtonItem alloc]initWithTitle:@"Details" style:UIBarButtonItemStylePlain target:self action:@selector(viewSeqOfOp)];
-    popButton = [[UIBarButtonItem alloc]initWithTitle:@"iSchematic - Home" style:UIBarButtonItemStylePlain target:self action:@selector(popView)];
+//    popButton = [[UIBarButtonItem alloc]initWithTitle:@"iSchematic - Home" style:UIBarButtonItemStylePlain target:self action:@selector(popView)];
+    popButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ionicons_2-0-1_ios-home_75_0_007dff_none.png"] style:UIBarButtonItemStylePlain target:self action:@selector(popView)];
+
     
     //UIBarButtonItem *forwardButton = [[UIBarButtonItem alloc]initWithTitle:@"Forward" style:UIBarButtonItemStylePlain target:self action:@selector(goForwardModule)];
     //UIBarButtonItem *zoomInButton = [[UIBarButtonItem alloc]initWithTitle:@"Zoom In" style:UIBarButtonItemStylePlain target:self action:@selector(moduleZoomIn)];
@@ -123,7 +125,9 @@ UIBarButtonItem *popButton;
     NSString *currentURL = webView.request.URL.absoluteString;
 
     //NSLog(@"URL %@", currentURL);
-    NSString *js1 = @"document.getElementById('HIDDEN_TABLET_TEMPLATE_CONTENT').innerHTML";
+//    NSString *js1 = @"document.getElementById('HIDDEN_TABLET_TEMPLATE_CONTENT').innerHTML";
+    NSString *js1 = @"document.getElementsByTagName('body')[0].innerHTML";
+    
     NSString *res1 = [webView stringByEvaluatingJavaScriptFromString:js1];
 
     winPop.fileName = currentURL;
